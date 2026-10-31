@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday AI | Startup Pitch</title>
+    <meta
+      name="description"
+      content="Interactive startup pitch deck for Everyday AI: DawaSathi, PV-Intake and QueueWise."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <div>
+            <span class="brand-name">Everyday AI</span>
+            <small>Startup Pitch</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-btn active" data-view="deck">Deck</button>
+          <button class="nav-btn" data-view="pitch">Elevator Pitch</button>
+          <button class="nav-btn" data-view="qa">Judge Q&A</button>
+          <button class="nav-btn" data-view="mistakes">Mistakes</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="deck-view" class="view active">
+          <div class="toolbar">
+            <div class="slide-counter">
+              <span id="slide-number">1</span>
+              <span>/</span>
+              <span id="slide-total">12</span>
+            </div>
+            <div class="deck-actions">
+              <button id="prev-btn" class="secondary-btn">Previous</button>
+              <button id="next-btn" class="primary-btn">Next</button>
+            </div>
+          </div>
+
+          <div id="slide-container" class="slide-container" aria-live="polite"></div>
+        </section>
+
+        <section id="pitch-view" class="view">
+          <div class="content-panel narrowed">
+            <h2>60-Second Elevator Pitch</h2>
+            <div class="pitch-box">
+              <p id="elevator-pitch"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="qa-view" class="view">
+          <div class="content-panel">
+            <h2>Judge Preparation: Tough Questions</h2>
+            <div id="qa-container" class="qa-list"></div>
+          </div>
+        </section>
+
+        <section id="mistakes-view" class="view">
+          <div class="content-panel">
+            <h2>Common Mistakes to Avoid</h2>
+            <ul id="mistakes-list" class="mistakes-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
